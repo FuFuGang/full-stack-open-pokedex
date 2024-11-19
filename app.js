@@ -1,11 +1,12 @@
-const express = require("express");
-const app = express();
+const express = require('express')
+const app = express()
 
-// get the port from env variable
-const PORT = process.env.PORT || 5000;
+// 使用环境变量端口或默认 3001
+const PORT = process.env.PORT || 3001
 
-app.use(express.static("dist"));
+app.use(express.static('dist'))
 
+// 移除或修改 console.log
 app.listen(PORT, () => {
-  console.log(`server started on port ${PORT}`);
-});
+  // 在生产环境中应该使用proper logging库
+})
