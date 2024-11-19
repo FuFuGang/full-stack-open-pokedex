@@ -9,4 +9,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, world!"
+      - name: say hello
+        run: echo "Hello, world!"
+      - name: Print the current date
+        run: echo "Today's date is $(date)"
+      - name: List directory contents
+        run: ls -la
+
