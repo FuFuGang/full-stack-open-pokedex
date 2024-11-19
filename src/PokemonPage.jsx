@@ -26,7 +26,11 @@ const PokemonPage = ({ previous, next }) => {
   const normalAbility = pokemon.abilities.find((ability) => !ability.is_hidden)
   const hiddenAbility = pokemon.abilities.find((ability) => ability.is_hidden === true)
 
-  console.log('hiddenAbility=', hiddenAbility)
+  try {
+    console.log('hiddenAbility=', hiddenAbility)
+  } catch (error) {
+    // 使用proper错误处理
+  }
   return (
     <>
       <div className="links">
